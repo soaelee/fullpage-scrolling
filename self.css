@@ -1,0 +1,137 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.fullscreen{
+    width: 100%;
+}
+
+.fbx{
+    display: flex;
+    align-items: center;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 40px;
+    width: 100%;    
+    z-index: 1;
+}
+
+.header__container{
+    height: 70px;
+    width: 80%;
+    max-width: 100%;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    background-color: white;
+    border-radius: 30px;
+    padding: 0 2rem;
+    margin: 0 auto;   
+    box-shadow: 0 2px 4px rgba(0,0,0,0.7), 0 7px 14px rgba(0,0,0,0.14);  
+    text-align: center;
+}
+.header__container .fas{
+    color: lightgray;
+    cursor: pointer;
+}
+
+.logo{
+    font-weight: 500;
+    font-size: 20px;
+}
+/* bg contain vs cover : https://rgy0409.tistory.com/2994 */
+section{
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 0 15px;
+}
+
+section.right{
+    background-position: left center;
+}
+
+section:first-child{
+    background-size: cover;
+}
+
+.container{
+    width: 1024px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 140px 0;
+    color: #fff;
+}
+
+.container.home{
+    text-align: center;
+}
+
+.right .container{
+    text-align: right;
+}
+
+h1{
+    font-size: 45px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.link{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px 40px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border: 2px solid yellowgreen;
+    border-radius: 30px;
+    display: inline-block;
+    transition: all 100ms ease-in-out;
+}
+
+.link:hover{
+    border-color: white;
+}
+
+h2{
+    font-weight: 300;
+    font-size: 40px;
+    margin-bottom: 40px;
+}   
+
+.content{
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 1024px){
+
+    .fullscreen{
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+    }
+    /* header밑에 모두 */
+    .fullscreen .contents{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        transition: all 560ms ease-out;
+    }
+    section{
+        height: 100vh;
+        padding-top: 110px;
+    }
+}
